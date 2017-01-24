@@ -8,13 +8,15 @@
 <head>
 
 <script type="text/javascript">
-	var notifyGA = function() {
-	  var updatedPath = window.location.pathname + window.location.hash;
-	  ga('set', 'page', updatedPath);
-	  ga('send', 'pageview');
-	  console.log(updatedPath);
-	};
-	window.onhashchange = notifyGA;
+	window.onload(function(){
+		var notifyGA = function() {
+		  var updatedPath = window.location.pathname + window.location.hash;
+		  ga('set', 'page', updatedPath);
+		  ga('send', 'pageview');
+		  console.log(updatedPath);
+		};
+		window.onhashchange = notifyGA;
+	});
 </script>
 
   <script>
