@@ -7,6 +7,16 @@
 <!--<![endif]-->
 <head>
 
+<script type="text/javascript">
+	var notifyGA = function() {
+	  var updatedPath = window.location.pathname + window.location.hash;
+	  ga('set', 'page', updatedPath);
+	  ga('send', 'pageview');
+	  //console.log(updatedPath);
+	};
+	window.onhashchange = notifyGA;
+</script>
+
 <!-- Google Analytics Content Experiment code -->
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='138693955-0',d=document,l=d.location,c=d.cookie;
