@@ -34,15 +34,19 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </script>
 
 <!-- Tweak for Google Analytics to catch SPA navigation -->
-<script type="text/javascript">
-  window.onload = function() {
-    window.onhashchange = function() {
-      var newPage = window.location.pathname + window.location.hash;
-      ga('set', 'page', newPage);
-      ga('send', 'pageview');
-      console.log(newPage);
-    };
-  };
+<script>
+var currentPage = window.location.href;
+window.onload = function() {
+	setInterval(function() {
+	    if (currentPage !== window.location.href) {
+	        currentPage = window.location.href;
+	        var newPage = window.location.pathname + window.location.hash
+			ga('set', 'page', newPage);
+			ga('send', 'pageview');
+			console.log(newPage);        
+	    }
+	}, 100);
+};
 </script>
 <!-- End of tweak for Google Analytics to catch SPA navigation -->
 
