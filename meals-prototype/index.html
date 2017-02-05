@@ -27,8 +27,8 @@
 	var currentPage = window.location.href;
 	window.onload = function() {
 		setInterval(function() {
-		    if (currentPage !== window.location.hash) {
-	        currentPage = window.location.hash;
+		    if (currentPage !== window.location.href) {
+	        currentPage = window.location.href;
 					ga('set', 'page', currentPage);
 					ga('send', 'pageview');
 					console.log(currentPage);        
