@@ -28,10 +28,11 @@
 	window.onload = function() {
 		setInterval(function() {
 		    if (currentPage !== window.location.href) {
-	        currentPage = window.location.href;
-					ga('set', 'page', currentPage);
-					ga('send', 'pageview');
-					console.log(currentPage);        
+		        currentPage = window.location.href;
+				var gaLink = location.href.replace(location.origin, '');
+				ga('set', 'page', gaLink);
+				ga('send', 'pageview');
+				console.log(gaLink);        
 		    }
 		}, 100);
 	};
