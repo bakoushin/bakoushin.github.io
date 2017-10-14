@@ -1,0 +1,6 @@
+[submodule "fcc/tribute"]
+	path = fcc/tribute
+	url = https://github.com/bakoushin/fcc-tribute.git
+[submodule "fcc/portfolio"]
+	path = fcc/portfolio
+	url = https://github.com/bakoushin/fcc-portfolio.git
