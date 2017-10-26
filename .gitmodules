@@ -6,10 +6,7 @@
 	path = fcc/portfolio
 	url = https://github.com/bakoushin/fcc-portfolio.git
 	branch = master
-[submodule "fcc/--name"]
-	path = fcc/--name
-	url = https://github.com/bakoushin/fcc-portfolio.git
-	branch = master
-[submodule "fcc/fcc-quotes"]
-	path = fcc/fcc-quotes
+[submodule "fcc/quotes"]
+	path = fcc/quotes
 	url = https://github.com/bakoushin/fcc-quotes.git
+	branch = master
