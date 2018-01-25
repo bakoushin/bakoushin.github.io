@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/style.min.css">
+    <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+    <script defer src="/script.js"></script>
+    <title>Яндекс.Переговорки</title>
+</head>
+
+<body>
+    <section id="main" class="fullscreen">
+        <div class="header__container">
+            <div class="header__main">
+                <a href="/">
+                    <img class="header__logo" src="/img/logo.svg" alt="Яндекс.Переговорки">
+                </a>
+                <div class="header__toolbar">
+                    <button id="app-create-meeting-button" class="button button--primary">Создать встречу</button>
+                </div>
+            </div>
+        </div>
+        <div class="date__container">
+            <div class="date__main">
+                <div class="date__picker">
+                    <button class="button button--arrow-right"></button>
+                    <span class="date__text">14 дек · Сегодня</span>
+                    <button class="button button--arrow-left"></button>
+                </div>
+                <div class="calendar__container date__calendar">
+                    <div class="calendar__main">
+                        <div class="calendar__month">
+                            <div class="calendar__month-title">Декабрь</div>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day">1</span>
+                            <span class="calendar__day calendar__day--holiday">2</span>
+                            <span class="calendar__day calendar__day--holiday">3</span>
+                            <span class="calendar__day">4</span>
+                            <span class="calendar__day">5</span>
+                            <span class="calendar__day">6</span>
+                            <span class="calendar__day">7</span>
+                            <span class="calendar__day">8</span>
+                            <span class="calendar__day calendar__day--holiday">9</span>
+                            <span class="calendar__day calendar__day--holiday">10</span>
+                            <span class="calendar__day">11</span>
+                            <span class="calendar__day">12</span>
+                            <span class="calendar__day">13</span>
+                            <span class="calendar__day calendar__day--today">14</span>
+                            <span class="calendar__day">15</span>
+                            <span class="calendar__day calendar__day--holiday">16</span>
+                            <span class="calendar__day calendar__day--holiday">17</span>
+                            <span class="calendar__day">18</span>
+                            <span class="calendar__day">19</span>
+                            <span class="calendar__day">20</span>
+                            <span class="calendar__day">21</span>
+                            <span class="calendar__day">22</span>
+                            <span class="calendar__day calendar__day--holiday">23</span>
+                            <span class="calendar__day calendar__day--holiday">24</span>
+                            <span class="calendar__day">25</span>
+                            <span class="calendar__day">26</span>
+                            <span class="calendar__day">27</span>
+                            <span class="calendar__day">28</span>
+                            <span class="calendar__day">29</span>
+                            <span class="calendar__day calendar__day--holiday">30</span>
+                            <span class="calendar__day calendar__day--holiday">31</span>
+                        </div>
+                        <div class="calendar__month">
+                            <div class="calendar__month-title">Январь</div>
+                            <span class="calendar__day calendar__day--holiday">1</span>
+                            <span class="calendar__day calendar__day--holiday">2</span>
+                            <span class="calendar__day calendar__day--holiday">3</span>
+                            <span class="calendar__day calendar__day--holiday">4</span>
+                            <span class="calendar__day calendar__day--holiday">5</span>
+                            <span class="calendar__day calendar__day--holiday">6</span>
+                            <span class="calendar__day calendar__day--holiday">7</span>
+                            <span class="calendar__day calendar__day--holiday">8</span>
+                            <span class="calendar__day">9</span>
+                            <span class="calendar__day">10</span>
+                            <span class="calendar__day">11</span>
+                            <span class="calendar__day">12</span>
+                            <span class="calendar__day calendar__day--holiday">13</span>
+                            <span class="calendar__day calendar__day--holiday">14</span>
+                            <span class="calendar__day">15</span>
+                            <span class="calendar__day">16</span>
+                            <span class="calendar__day">17</span>
+                            <span class="calendar__day">18</span>
+                            <span class="calendar__day">19</span>
+                            <span class="calendar__day calendar__day--holiday">20</span>
+                            <span class="calendar__day calendar__day--holiday">21</span>
+                            <span class="calendar__day">22</span>
+                            <span class="calendar__day">23</span>
+                            <span class="calendar__day">24</span>
+                            <span class="calendar__day">25</span>
+                            <span class="calendar__day">26</span>
+                            <span class="calendar__day calendar__day--holiday">27</span>
+                            <span class="calendar__day calendar__day--holiday">28</span>
+                            <span class="calendar__day">29</span>
+                            <span class="calendar__day">30</span>
+                            <span class="calendar__day">31</span>
+                        </div>
+                        <div class="calendar__month">
+                            <div class="calendar__month-title">Февраль</div>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day"></span>
+                            <span class="calendar__day">1</span>
+                            <span class="calendar__day">2</span>
+                            <span class="calendar__day calendar__day--holiday">3</span>
+                            <span class="calendar__day calendar__day--holiday">4</span>
+                            <span class="calendar__day">5</span>
+                            <span class="calendar__day">6</span>
+                            <span class="calendar__day">7</span>
+                            <span class="calendar__day">8</span>
+                            <span class="calendar__day">9</span>
+                            <span class="calendar__day calendar__day--holiday">10</span>
+                            <span class="calendar__day calendar__day--holiday">11</span>
+                            <span class="calendar__day">12</span>
+                            <span class="calendar__day">13</span>
+                            <span class="calendar__day">14</span>
+                            <span class="calendar__day">15</span>
+                            <span class="calendar__day">16</span>
+                            <span class="calendar__day calendar__day--holiday">17</span>
+                            <span class="calendar__day calendar__day--holiday">18</span>
+                            <span class="calendar__day">19</span>
+                            <span class="calendar__day">20</span>
+                            <span class="calendar__day">21</span>
+                            <span class="calendar__day">22</span>
+                            <span class="calendar__day calendar__day--holiday">23</span>
+                            <span class="calendar__day calendar__day--holiday">24</span>
+                            <span class="calendar__day calendar__day--holiday">25</span>
+                            <span class="calendar__day">26</span>
+                            <span class="calendar__day">27</span>
+                            <span class="calendar__day">28</span>
+                            <span class="calendar__day">29</span>
+                            <span class="calendar__day">30</span>
+                            <span class="calendar__day">31</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule__container">
+            <div class="timeline__container">
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value timeline__value--elapsed">8:00</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value timeline__value--elapsed">9</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value timeline__value--elapsed">10</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value timeline__value--elapsed">11</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">12</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">13</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">14</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">15</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">16</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">17</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">18</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">19</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">20</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">21</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">22</span>
+                    </div>
+                </div>
+                <div class="timeline__mark">
+                    <div class="timeline__value-container">
+                        <span class="timeline__value">23</span>
+                    </div>
+                </div>
+                <div class="timeline__current-time-mark" id="js-current-time">
+                    <div class="timeline__current-time-value-container">
+                        <div class="timeline__current-time-value-block">
+                            <span class="timeline__current-time-value" id="js-current-time-value">11:05</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="schedule__floor">
+                    <span class="schedule__floor-title">7 этаж</span>
+                </div>
+                <div class="schedule__room schedule__room--occupied">
+                    <span id="slot-1-1" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Ржавый Фред</div>
+                    <div class="schedule__room-capacity">3—6 человек</div>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-2-1" class="slot slot--occupied"></span>
+                    <span id="slot-2-2" class="slot slot--free"></span>
+                    <span id="slot-2-3" class="slot slot--free"></span>
+                    <span id="slot-2-4" class="slot slot--free"></span>
+                    <span id="slot-2-5" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Прачечная</div>
+                    <div class="schedule__room-capacity">до 10 человек</div>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-3-1" class="slot slot--occupied"></span>
+                    <span id="slot-3-2" class="slot slot--free"></span>
+                    <span id="slot-3-3" class="slot slot--free"></span>
+                    <span id="slot-3-4" class="slot slot--free"></span>
+                    <span id="slot-3-5" class="slot slot--occupied"></span>
+                    <span id="slot-3-6" class="slot slot--occupied"></span>
+                    <span id="slot-3-7" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Жёлтый дом</div>
+                    <div class="schedule__room-capacity">до 10 человек</div>
+                </div>
+                <div class="schedule__room schedule__room--occupied">
+                    <span id="slot-4-1" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Оранжевый тюльпан</div>
+                    <div class="schedule__room-capacity">до 10 человек</div>
+                </div>
+                <div class="schedule__floor">
+                    <span class="schedule__floor-title">6 этаж</span>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-5-1" class="slot slot--occupied"></span>
+                    <span id="slot-5-2" class="slot slot--free"></span>
+                    <span id="slot-5-3" class="slot slot--free"></span>
+                    <span id="slot-5-4" class="slot slot--occupied"></span>
+                    <span id="slot-5-5" class="slot slot--free"></span>
+                    <span id="slot-5-6" class="slot slot--free"></span>
+                    <span id="slot-5-7" class="slot slot--free"></span>
+                    <span id="slot-5-8" class="slot slot--occupied"></span>
+                    <span id="slot-5-9" class="slot slot--occupied"></span>
+                    <span id="slot-5-10" class="slot slot--free"></span>
+                    <span id="slot-5-11" class="slot slot--free"></span>
+                    <span id="slot-5-12" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Джокер</div>
+                    <div class="schedule__room-capacity">3—6 человек</div>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-6-1" class="slot slot--occupied"></span>
+                    <span id="slot-6-2" class="slot slot--free"></span>
+                    <span id="slot-6-3" class="slot slot--free"></span>
+                    <span id="slot-6-4" class="slot slot--occupied"></span>
+                    <span id="slot-6-5" class="slot slot--free"></span>
+                    <span id="slot-6-6" class="slot slot--occupied"></span>
+                    <span id="slot-6-7" class="slot slot--free"></span>
+                    <span id="slot-6-8" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Мариванна</div>
+                    <div class="schedule__room-capacity">3—6 человек</div>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-7-1" class="slot slot--occupied"></span>
+                    <span id="slot-7-2" class="slot slot--free"></span>
+                    <span id="slot-7-3" class="slot slot--free"></span>
+                    <span id="slot-7-4" class="slot slot--occupied"></span>
+                    <span id="slot-7-5" class="slot slot--free"></span>
+                    <span id="slot-7-6" class="slot slot--free"></span>
+                    <span id="slot-7-7" class="slot slot--occupied"></span>
+                    <span id="slot-7-8" class="slot slot--free"></span>
+                    <span id="slot-7-9" class="slot slot--free"></span>
+                    <span id="slot-7-10" class="slot slot--free"></span>
+                    <span id="slot-7-11" class="slot slot--free"></span>
+                    <span id="slot-7-12" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Тонкий Боб</div>
+                    <div class="schedule__room-capacity">3—6 человек</div>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-8-1" class="slot slot--occupied"></span>
+                    <span id="slot-8-2" class="slot slot--free"></span>
+                    <span id="slot-8-3" class="slot slot--free"></span>
+                    <span id="slot-8-4" class="slot slot--free"></span>
+                    <span id="slot-8-5" class="slot slot--occupied"></span>
+                    <span id="slot-8-6" class="slot slot--free"></span>
+                    <span id="slot-8-7" class="slot slot--free"></span>
+                    <span id="slot-8-8" class="slot slot--free"></span>
+                    <span id="slot-8-9" class="slot slot--occupied"></span>
+                    <span id="slot-8-10" class="slot slot--occupied"></span>
+                    <span id="slot-8-11" class="slot slot--free"></span>
+                    <span id="slot-8-12" class="slot slot--free"></span>
+                    <span id="slot-8-13" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Чёрная вдова</div>
+                    <div class="schedule__room-capacity">3—6 человек</div>
+                </div>
+                <div class="schedule__room">
+                    <span id="slot-9-1" class="slot slot--occupied"></span>
+                    <span id="slot-9-2" class="slot slot--free"></span>
+                    <span id="slot-9-3" class="slot slot--free"></span>
+                    <span id="slot-9-4" class="slot slot--occupied"></span>
+                    <span id="slot-9-5" class="slot slot--occupied"></span>
+                    <span id="slot-9-6" class="slot slot--occupied"></span>
+                    <span id="slot-9-7" class="slot slot--free"></span>
+                    <span id="slot-9-8" class="slot slot--occupied"></span>
+                    <div class="schedule__room-title">Белорусский ликёр</div>
+                    <div class="schedule__room-capacity">3—6 человек</div>
+                </div>
+            </div>
+            <div class="slot-tooltip">
+                <div class="slot-tooltip__pointer"></div>
+                <button class="button button--edit slot-tooltip__button-edit"></button>
+                <div class="slot-tooltip__title">Рассуждения о высоком</div>
+                <div class="slot-tooltip__info">
+                    <span class="slot-tooltip__date">14 декабря</span>,
+                    <span class="slot-tooltip__time">15:00—17:00</span> ·
+                    <span class="slot-tooltip__room">Жёлтый дом</span>
+                </div>
+                <div class="slot-tooltip__people">
+                    <span class="person">
+                        <img class="person__avatar" src="http://placebeard.it/32x32">
+                        <span>Дарт Вейдер</span>
+                        <span class="person__info">и 12 участников</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="form-create" class="fullscreen">
+        <div class="header__container">
+            <div class="header__main">
+                <a href="/">
+                    <img class="header__logo" src="/img/logo.svg" alt="Яндекс.Переговорки">
+                </a>
+            </div>
+        </div>
+        <div class="form__container">
+            <form class="form__main">
+                <h1 class="form__header">Новая встреча
+                    <button class="button button--close form__button--close"></button>
+                </h1>
+                <div class="form__row">
+                    <span class="form__column">
+                        <div class="form__element">
+                            <label class="form__label" for="title">Тема</label>
+                            <div class="form__input-with-button">
+                                <input class="form__input form__input--text" type="text" name="title" placeholder="О чём будете говорить?" required>
+                                <button class="button button--clear form__input-inline-button"></button>
+                            </div>
+                        </div>
+                    </span>
+                    <div class="form__column form__column--mobile-block">
+                        <span class="form__element form__element--date">
+                            <label class="form__label form__label--mobile-only" for="date">Дата и время</label>
+                            <label class="form__label form__label--desktop-only" for="date">Дата</label>
+                            <div class="form__input-with-button">
+                                <input class="form__input form__input--date" type="text" name="date" value="14 декабря, 2017" readonly>
+                                <button class="button button--calendar form__input-inline-button"></button>
+                                <div class="calendar__container form__calendar">
+                                    <div class="calendar__main">
+                                        <div class="calendar__month">
+                                            <div class="calendar__month-title">Декабрь</div>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day">1</span>
+                                            <span class="calendar__day calendar__day--holiday">2</span>
+                                            <span class="calendar__day calendar__day--holiday">3</span>
+                                            <span class="calendar__day">4</span>
+                                            <span class="calendar__day">5</span>
+                                            <span class="calendar__day">6</span>
+                                            <span class="calendar__day">7</span>
+                                            <span class="calendar__day">8</span>
+                                            <span class="calendar__day calendar__day--holiday">9</span>
+                                            <span class="calendar__day calendar__day--holiday">10</span>
+                                            <span class="calendar__day">11</span>
+                                            <span class="calendar__day">12</span>
+                                            <span class="calendar__day">13</span>
+                                            <span class="calendar__day calendar__day--today">14</span>
+                                            <span class="calendar__day">15</span>
+                                            <span class="calendar__day calendar__day--holiday">16</span>
+                                            <span class="calendar__day calendar__day--holiday">17</span>
+                                            <span class="calendar__day">18</span>
+                                            <span class="calendar__day">19</span>
+                                            <span class="calendar__day">20</span>
+                                            <span class="calendar__day">21</span>
+                                            <span class="calendar__day">22</span>
+                                            <span class="calendar__day calendar__day--holiday">23</span>
+                                            <span class="calendar__day calendar__day--holiday">24</span>
+                                            <span class="calendar__day">25</span>
+                                            <span class="calendar__day">26</span>
+                                            <span class="calendar__day">27</span>
+                                            <span class="calendar__day">28</span>
+                                            <span class="calendar__day">29</span>
+                                            <span class="calendar__day calendar__day--holiday">30</span>
+                                            <span class="calendar__day calendar__day--holiday">31</span>
+                                        </div>
+                                        <div class="calendar__month">
+                                            <div class="calendar__month-title">Январь</div>
+                                            <span class="calendar__day calendar__day--holiday">1</span>
+                                            <span class="calendar__day calendar__day--holiday">2</span>
+                                            <span class="calendar__day calendar__day--holiday">3</span>
+                                            <span class="calendar__day calendar__day--holiday">4</span>
+                                            <span class="calendar__day calendar__day--holiday">5</span>
+                                            <span class="calendar__day calendar__day--holiday">6</span>
+                                            <span class="calendar__day calendar__day--holiday">7</span>
+                                            <span class="calendar__day calendar__day--holiday">8</span>
+                                            <span class="calendar__day">9</span>
+                                            <span class="calendar__day">10</span>
+                                            <span class="calendar__day">11</span>
+                                            <span class="calendar__day">12</span>
+                                            <span class="calendar__day calendar__day--holiday">13</span>
+                                            <span class="calendar__day calendar__day--holiday">14</span>
+                                            <span class="calendar__day">15</span>
+                                            <span class="calendar__day">16</span>
+                                            <span class="calendar__day">17</span>
+                                            <span class="calendar__day">18</span>
+                                            <span class="calendar__day">19</span>
+                                            <span class="calendar__day calendar__day--holiday">20</span>
+                                            <span class="calendar__day calendar__day--holiday">21</span>
+                                            <span class="calendar__day">22</span>
+                                            <span class="calendar__day">23</span>
+                                            <span class="calendar__day">24</span>
+                                            <span class="calendar__day">25</span>
+                                            <span class="calendar__day">26</span>
+                                            <span class="calendar__day calendar__day--holiday">27</span>
+                                            <span class="calendar__day calendar__day--holiday">28</span>
+                                            <span class="calendar__day">29</span>
+                                            <span class="calendar__day">30</span>
+                                            <span class="calendar__day">31</span>
+                                        </div>
+                                        <div class="calendar__month">
+                                            <div class="calendar__month-title">Февраль</div>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day">1</span>
+                                            <span class="calendar__day">2</span>
+                                            <span class="calendar__day calendar__day--holiday">3</span>
+                                            <span class="calendar__day calendar__day--holiday">4</span>
+                                            <span class="calendar__day">5</span>
+                                            <span class="calendar__day">6</span>
+                                            <span class="calendar__day">7</span>
+                                            <span class="calendar__day">8</span>
+                                            <span class="calendar__day">9</span>
+                                            <span class="calendar__day calendar__day--holiday">10</span>
+                                            <span class="calendar__day calendar__day--holiday">11</span>
+                                            <span class="calendar__day">12</span>
+                                            <span class="calendar__day">13</span>
+                                            <span class="calendar__day">14</span>
+                                            <span class="calendar__day">15</span>
+                                            <span class="calendar__day">16</span>
+                                            <span class="calendar__day calendar__day--holiday">17</span>
+                                            <span class="calendar__day calendar__day--holiday">18</span>
+                                            <span class="calendar__day">19</span>
+                                            <span class="calendar__day">20</span>
+                                            <span class="calendar__day">21</span>
+                                            <span class="calendar__day">22</span>
+                                            <span class="calendar__day calendar__day--holiday">23</span>
+                                            <span class="calendar__day calendar__day--holiday">24</span>
+                                            <span class="calendar__day calendar__day--holiday">25</span>
+                                            <span class="calendar__day">26</span>
+                                            <span class="calendar__day">27</span>
+                                            <span class="calendar__day">28</span>
+                                            <span class="calendar__day">29</span>
+                                            <span class="calendar__day">30</span>
+                                            <span class="calendar__day">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="form__element form__element--time">
+                            <label class="form__label form__label--desktop-only" for="time-start">Начало</label>
+                            <input class="form__input" type="text" name="time-start" value="16:00">
+                        </span>
+                        <span class="form__text">—</span>
+                        <span class="form__element form__element--time">
+                            <label class="form__label form__label--desktop-only" for="time-end">Конец</label>
+                            <input class="form__input" type="text" name="time-end" value="16:30">
+                        </span>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__column form__column--mobile-block">
+                        <div class="form__element">
+                            <label class="form__label" for="people">Участники</label>
+                            <div class="form__input-with-button">
+                                <input id="js-members-input" class="form__input" type="text" name="members" placeholder="Например, Тор Одинович">
+                                <button id="js-members-dropdown-button" class="button button--dropdown-up form__input-inline-button"></button>
+                            </div>
+                        </div>
+                        <div id="js-members-list" class="form__people">
+                            <span class="person person--sticker">
+                                <img class="person__avatar" src="http://placebeard.it/32x32">
+                                <span>Лекс Лютер</span>
+                                <button class="button button--clear person__button-clear"></button>
+                            </span>
+                            <span class="person person--sticker">
+                                <img class="person__avatar" src="http://placebeard.it/32x32">
+                                <span>Томас Андерсон</span>
+                                <button class="button button--clear person__button-clear"></button>
+                            </span>
+                            <span class="person person--sticker">
+                                <img class="person__avatar" src="http://placebeard.it/32x32">
+                                <span>Дарт Вейдер</span>
+                                <button class="button button--clear person__button-clear"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form__column form__column--mobile-block">
+                        <div class="form__label">Рекомендованные переговорки</div>
+                        <div class="form__element room__container">
+                            <span class="room__time">16:00—16:30</span>
+                            <span>Готем · 4 этаж</span>
+                        </div>
+                        <div class="form__element room__container">
+                            <span class="room__time">16:00—16:30</span>
+                            <span>Готем · 4 этаж</span>
+                        </div>
+                        <div class="form__element room__container">
+                            <span class="room__time">16:00—16:30</span>
+                            <span>Поле непаханное · 4 этаж</span>
+                        </div>
+                        <div class="form__element room__container">
+                            <span class="room__time">16:00—16:30</span>
+                            <span>Тёмная башня · 4 этаж</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form__suggestion">
+            Выберите переговорку
+        </div>
+        <div class="form__toolbar-container">
+            <div class="form__toolbar">
+                <button class="button button--default form__button">Отмена</button>
+                <button class="button button--primary form__button js-create-event">Создать встречу</button>
+            </div>
+        </div>
+    </section>
+    <section id="form-edit" class="fullscreen">
+        <div class="header__container">
+            <div class="header__main">
+                <a href="/">
+                    <img class="header__logo" src="/img/logo.svg" alt="Яндекс.Переговорки">
+                </a>
+            </div>
+        </div>
+        <div class="form__container">
+            <form class="form__main">
+                <h1 class="form__header">Редактирование встречи
+                    <button class="button button--close form__button--close"></button>
+                </h1>
+                <div class="form__row">
+                    <span class="form__column">
+                        <div class="form__element">
+                            <label class="form__label" for="title">Тема</label>
+                            <div class="form__input-with-button">
+                                <input class="form__input form__input--text" type="text" name="title" placeholder="О чём будете говорить?" required value="Тестовое задание в ШРИ">
+                                <button class="button button--clear form__input-inline-button"></button>
+                            </div>
+                        </div>
+                    </span>
+                    <div class="form__column form__column--mobile-block">
+                        <span class="form__element form__element--date">
+                            <label class="form__label form__label--mobile-only" for="date">Дата и время</label>
+                            <label class="form__label form__label--desktop-only" for="date">Дата</label>
+                            <div class="form__input-with-button">
+                                <input class="form__input form__input--date" type="text" name="date" value="14 декабря, 2017" readonly>
+                                <button class="button button--calendar form__input-inline-button"></button>
+                                <div class="calendar__container form__calendar">
+                                    <div class="calendar__main">
+                                        <div class="calendar__month">
+                                            <div class="calendar__month-title">Декабрь</div>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day">1</span>
+                                            <span class="calendar__day calendar__day--holiday">2</span>
+                                            <span class="calendar__day calendar__day--holiday">3</span>
+                                            <span class="calendar__day">4</span>
+                                            <span class="calendar__day">5</span>
+                                            <span class="calendar__day">6</span>
+                                            <span class="calendar__day">7</span>
+                                            <span class="calendar__day">8</span>
+                                            <span class="calendar__day calendar__day--holiday">9</span>
+                                            <span class="calendar__day calendar__day--holiday">10</span>
+                                            <span class="calendar__day">11</span>
+                                            <span class="calendar__day">12</span>
+                                            <span class="calendar__day">13</span>
+                                            <span class="calendar__day calendar__day--today">14</span>
+                                            <span class="calendar__day">15</span>
+                                            <span class="calendar__day calendar__day--holiday">16</span>
+                                            <span class="calendar__day calendar__day--holiday">17</span>
+                                            <span class="calendar__day">18</span>
+                                            <span class="calendar__day">19</span>
+                                            <span class="calendar__day">20</span>
+                                            <span class="calendar__day">21</span>
+                                            <span class="calendar__day">22</span>
+                                            <span class="calendar__day calendar__day--holiday">23</span>
+                                            <span class="calendar__day calendar__day--holiday">24</span>
+                                            <span class="calendar__day">25</span>
+                                            <span class="calendar__day">26</span>
+                                            <span class="calendar__day">27</span>
+                                            <span class="calendar__day">28</span>
+                                            <span class="calendar__day">29</span>
+                                            <span class="calendar__day calendar__day--holiday">30</span>
+                                            <span class="calendar__day calendar__day--holiday">31</span>
+                                        </div>
+                                        <div class="calendar__month">
+                                            <div class="calendar__month-title">Январь</div>
+                                            <span class="calendar__day calendar__day--holiday">1</span>
+                                            <span class="calendar__day calendar__day--holiday">2</span>
+                                            <span class="calendar__day calendar__day--holiday">3</span>
+                                            <span class="calendar__day calendar__day--holiday">4</span>
+                                            <span class="calendar__day calendar__day--holiday">5</span>
+                                            <span class="calendar__day calendar__day--holiday">6</span>
+                                            <span class="calendar__day calendar__day--holiday">7</span>
+                                            <span class="calendar__day calendar__day--holiday">8</span>
+                                            <span class="calendar__day">9</span>
+                                            <span class="calendar__day">10</span>
+                                            <span class="calendar__day">11</span>
+                                            <span class="calendar__day">12</span>
+                                            <span class="calendar__day calendar__day--holiday">13</span>
+                                            <span class="calendar__day calendar__day--holiday">14</span>
+                                            <span class="calendar__day">15</span>
+                                            <span class="calendar__day">16</span>
+                                            <span class="calendar__day">17</span>
+                                            <span class="calendar__day">18</span>
+                                            <span class="calendar__day">19</span>
+                                            <span class="calendar__day calendar__day--holiday">20</span>
+                                            <span class="calendar__day calendar__day--holiday">21</span>
+                                            <span class="calendar__day">22</span>
+                                            <span class="calendar__day">23</span>
+                                            <span class="calendar__day">24</span>
+                                            <span class="calendar__day">25</span>
+                                            <span class="calendar__day">26</span>
+                                            <span class="calendar__day calendar__day--holiday">27</span>
+                                            <span class="calendar__day calendar__day--holiday">28</span>
+                                            <span class="calendar__day">29</span>
+                                            <span class="calendar__day">30</span>
+                                            <span class="calendar__day">31</span>
+                                        </div>
+                                        <div class="calendar__month">
+                                            <div class="calendar__month-title">Февраль</div>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day"></span>
+                                            <span class="calendar__day">1</span>
+                                            <span class="calendar__day">2</span>
+                                            <span class="calendar__day calendar__day--holiday">3</span>
+                                            <span class="calendar__day calendar__day--holiday">4</span>
+                                            <span class="calendar__day">5</span>
+                                            <span class="calendar__day">6</span>
+                                            <span class="calendar__day">7</span>
+                                            <span class="calendar__day">8</span>
+                                            <span class="calendar__day">9</span>
+                                            <span class="calendar__day calendar__day--holiday">10</span>
+                                            <span class="calendar__day calendar__day--holiday">11</span>
+                                            <span class="calendar__day">12</span>
+                                            <span class="calendar__day">13</span>
+                                            <span class="calendar__day">14</span>
+                                            <span class="calendar__day">15</span>
+                                            <span class="calendar__day">16</span>
+                                            <span class="calendar__day calendar__day--holiday">17</span>
+                                            <span class="calendar__day calendar__day--holiday">18</span>
+                                            <span class="calendar__day">19</span>
+                                            <span class="calendar__day">20</span>
+                                            <span class="calendar__day">21</span>
+                                            <span class="calendar__day">22</span>
+                                            <span class="calendar__day calendar__day--holiday">23</span>
+                                            <span class="calendar__day calendar__day--holiday">24</span>
+                                            <span class="calendar__day calendar__day--holiday">25</span>
+                                            <span class="calendar__day">26</span>
+                                            <span class="calendar__day">27</span>
+                                            <span class="calendar__day">28</span>
+                                            <span class="calendar__day">29</span>
+                                            <span class="calendar__day">30</span>
+                                            <span class="calendar__day">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="form__element form__element--time">
+                            <label class="form__label form__label--desktop-only" for="time-start">Начало</label>
+                            <input class="form__input" type="text" name="time-start" value="16:00">
+                        </span>
+                        <span class="form__text">—</span>
+                        <span class="form__element form__element--time">
+                            <label class="form__label form__label--desktop-only" for="time-end">Конец</label>
+                            <input class="form__input" type="text" name="time-end" value="16:30">
+                        </span>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__column form__column--mobile-block">
+                        <div class="form__element">
+                            <label class="form__label" for="people">Участники</label>
+                            <div class="form__input-with-button">
+                                <input class="form__input" type="text" name="members" placeholder="Например, Тор Одинович">
+                                <button class="button button--dropdown-up form__input-inline-button"></button>
+                            </div>
+                        </div>
+                        <div class="form__people">
+                            <span class="person person--sticker">
+                                <img class="person__avatar" src="http://placebeard.it/32x32">
+                                <span>Лекс Лютер</span>
+                                <button class="button button--clear person__button-clear"></button>
+                            </span>
+                            <span class="person person--sticker">
+                                <img class="person__avatar" src="http://placebeard.it/32x32">
+                                <span>Томас Андерсон</span>
+                                <button class="button button--clear person__button-clear"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form__column form__column--mobile-block">
+                        <div class="form__label">Ваша переговорка</div>
+                        <div class="form__element room__container room--selected">
+                            <span class="room__time">16:00—16:30</span>
+                            <span>Готем · 4 этаж</span>
+                            <button class="button button--clear room__button-clear"></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button--inline button--danger form__button--mobile-only js-delete-button">Удалить встречу</button>
+            </form>
+        </div>
+        <div class="form__toolbar-container">
+            <div class="form__toolbar">
+                <button class="button button--default form__button">Отмена</button>
+                <button class="button button--default form__button form__button--desktop-only js-delete-button">Удалить встречу</button>
+                <button class="button button--primary form__button">Сохранить</button>
+            </div>
+        </div>
+    </section>
+    <section id="modal-created">
+        <div class="modal__overlay">
+            <div class="modal__container">
+                <img src="/img/emoji2.svg">
+                <h1 class="modal__header">Встреча создана!</h1>
+                <div class="modal__text">
+                    <div class="modal__text-line">14 декабря, 15:00—17:00</div>
+                    <div class="modal__text-line">Готем · 4 этаж</div>
+                </div>
+                <div class="modal__toolbar">
+                    <button class="button button--primary modal__button">Хорошо</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="modal-delete">
+        <div class="modal__overlay">
+            <div class="modal__container">
+                <img src="/img/emoji1.svg">
+                <h1 class="modal__header">Встреча будет удалена безвозвратно</h1>
+                <div class="modal__toolbar">
+                    <button class="button button--default modal__button">Отмена</button>
+                    <button class="button button--default modal__button">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
