@@ -10,3 +10,7 @@
 	path = fcc/quotes
 	url = https://github.com/bakoushin/fcc-quotes.git
 	branch = master
+[submodule "fcc/weather"]
+	path = fcc/weather
+	url = https://github.com/bakoushin/fcc-weather.git
+	branch = master
