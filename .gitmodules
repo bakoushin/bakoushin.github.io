@@ -14,3 +14,11 @@
 	path = fcc/weather
 	url = https://github.com/bakoushin/fcc-weather.git
 	branch = master
+[submodule "shri/touch"]
+	path = shri/touch
+	url = https://github.com/bakoushin/shri-touch.git
+	branch = master
+[submodule "shri/css"]
+	path = shri/css
+	url = https://github.com/bakoushin/shri-css.git
+	branch = master
