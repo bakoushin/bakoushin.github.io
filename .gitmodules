@@ -26,7 +26,3 @@
 	path = shri/multimedia
 	url = https://github.com/bakoushin/shri-multimedia.git
 	branch = master
-[submodule "shri/architecture"]
-	path = shri/architecture
-	url = https://github.com/bakoushin/shri-architecture.git
-	branch = master
