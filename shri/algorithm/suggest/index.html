@@ -18,8 +18,8 @@
   <form>
     <div>Метод:</div>
     <div><label><input type="radio" name="method" id="methodTrie" checked>Префиксное дерево: O(m), где m — длина подстроки поиска</label></div>
-    <div><label><input type="radio" name="method" id="methodNaive">&laquo;В лоб&raquo;: O(n*2m), где n — количество записей, m — длина подстроки поиска (2 потому что сперва делается приведение регистра)</label></div>
-    <input type="text" id="input" autofocus>
+    <div><label><input type="radio" name="method" id="methodNaive">&laquo;В лоб&raquo;: O(n*2m), где n — количество записей, m — длина подстроки поиска (2 потому что сперва делается нормализация регистра)</label></div>
+    <input type="text" id="input" placeholder="Название улицы" autofocus>
   </form>
   <ol id="suggest"></ol>
 </body>
