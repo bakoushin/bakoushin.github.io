@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
+  <title>Suggest</title>
+  <script src="streets.js"></script>
+  <script src="trie.js"></script>
+  <script src="naiveFind.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <h1>Suggest</h1>
+  <form>
+    <div>Метод:</div>
+    <div><label><input type="radio" name="method" id="methodTrie" checked>Префиксное дерево: O(m), где m — длина подстроки поиска</label></div>
+    <div><label><input type="radio" name="method" id="methodNaive">&laquo;В лоб&raquo;: O(n*2m), где n — количество записей, m — длина подстроки поиска (2 потому что сперва делается приведение регистра)</label></div>
+    <input type="text" id="input" autofocus>
+  </form>
+  <ol id="suggest"></ol>
+</body>
+
+</html>
